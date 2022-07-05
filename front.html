@@ -1,70 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-compatible" content="ie=edge">
-        <title> The Gully Guy/www.thegullyguy.com</title>
-        <style>
-          #head{
-            border: 2px solid green;
-            border-radius:10px ;
-            width: 130px;
-            height: 50%;
-          }
-          a{
-            text-decoration: none;
-           }
-           .navbar li{
-             /* display: flex; */
-             float: left;
-            list-style: none;
-           }
-           .navbar{
-            border: 2px solid royalblue;
-            border-radius:60px;
-            background-color: aquamarine;
-           }
-           .navbar ul{
-            overflow: auto;
-           }
-           .navbar li a{
-            padding: 5px 75px;
-            color: brown;
-           }
-           .navbar li a :hover{
-            color: black;
-           }
-           .search{
-            border: 2px solid red;
-            border-radius: 30px;
-            float: right;
-            padding: 8px 200px;
-            margin-right: 112px;
-            }
-            .navbar input{
-              border:2px solid rgb(232, 21, 21);
-              border-radius: 15px;
-              padding:5px 10px;
-              /* margin:5px 5px; */
-            }
-        </style>
-    </head>
-    <body>
-      <header>
-        <nav class="navbar">
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Hotels</a></li>
-            <li><a href="">Restaurants</a></li>
-            <li><a href="">Gully ka Khaas</a></li>
-            <li><a href="">About us</a></li>
-            <li><a href="">Contact Us</a></li>
-            <div class="search"><input type="text" name="search" id="search" placeholder="Search Here"></div>
-          </ul>
-        </nav>
-      </header>
-        
-        
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheGullyguy/thegullyguy.com</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    #logo {
+      margin: 23px 24px;
+      padding: 20px 22px;
+    }
+
+    #logo img {
+      height: 80px;
+      margin: -40px -45px;
+      padding: 0px 15px;
+    }
+
+    #navbar ul {
+      display: flex;
+    }
+
+    #navbar::before {
+      content: "";
+      background-color: aquamarine;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      opacity: 0.7;
+    }
+
+    #navbar ul li {
+      list-style: none;
+      font-size: 18px;
+    }
+
+    #navbar ul li a {
+      text-decoration: none;
+      padding: 0px 30px;
+      border-radius: 10px;
+      color: blue;
+    }
+
+    #navbar ul li a:hover {
+      color: brown;
+      background-color: white;
+    }
+    #home{
+      display: flex;
+      flex-direction: column;
+      padding: 5px 150px;
+      justify-content: center;
+      align-items: center;
+    }
+    #home{
+      content: "";
+      background:url(bg1.jpg);
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      z-index: -1;
+      opacity: 0.8;
+      background-repeat: no-repeat;
+      
+    }
+    .main{
+      text-align: center;
+    }
+    .para{
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="logo"><img src="logo.jpg" alt="Page's Logo">
+    </div>
+    <ul>
+      <li class="item"><a href="#">Home</a></li>
+      <li class="item"><a href="#">Hotels</a></li>
+      <li class="item"><a href="#">Restaurants</a></li>
+      <li class="item"><a href="#">Gully Ka Khaas</a></li>
+      <li class="item"><a href="#">About Us</a></li>
+      <li class="item"><a href="#">Contact Us</a></li>
+    </ul>
+    <div class="search"><input type="text" placeholder="Search.."></div>
+  </nav>
+  <section id="home">
+    <h1 class="main">Hello! Wanderer</h1>
+    <hr>
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta maiores saepe eos nesciunt aliquam sapiente
+      aperiam. Est sapiente inventore eaque quod omnis nulla natus fugiat itaque! Culpa corrupti reiciendis deserunt
+      soluta corporis ratione tempora.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta maiores saepe eos nesciunt aliquam sapiente
+      aperiam. Est sapiente inventore eaque quod omnis nulla natus fugiat itaque! Culpa corrupti reiciendis deserunt
+      soluta corporis ratione tempora.</p>
+  </section>
+</body>
+
 </html>
